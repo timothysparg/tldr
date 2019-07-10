@@ -1,0 +1,7 @@
+---
+title: "Lets Automate Ourselves a Blog"
+date: 2019-07-10T06:14:04Z
+draft: true
+---
+
+hmf
