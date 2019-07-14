@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# https://unix.stackexchange.com/a/258514
+for arg do
+  shift
+  [ "$arg" = "--safe" ] && continue
+  set -- "$@" "$arg"
+done
+
+ /usr/local/bin/asciidoctor -r asciidoctor-html5s -b html5s -r asciidoctor-diagram "$@"
