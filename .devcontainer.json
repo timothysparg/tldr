@@ -2,5 +2,10 @@
 {
 	"dockerFile": "Dockerfile",
 	"extensions": [],
-	
+	"runArgs": [ 
+		"-v", "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro",
+		"--name", "hugo_dev"
+
+	],
+	"postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
 }
