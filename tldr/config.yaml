@@ -10,19 +10,19 @@ pygmentscodefences: true
 pygmentscodefencesguesssyntax: true
 params:
   author: Tim Sparg
-  info: Full Stack DevOps and Magician
+  info: Developer at rest
   description: Tim Spargs' personal website
   keywords: 'blog,developer,personal'
   avatarurl: images/avatar.jpg
   favicon_32: /img/favicon-32x32.png
   favicon_16: /img/favicon-16x16.png
-  footercontent: but did you grok more than null
+  footercontent: <div class="footerText"><i>but did you grok more than null?</i></div>
   hidecredits: false
   hidecopyright: false
   rtl: false
   math: false
   custom_css:
-    - css/molokai.css
+    - css/solarized.dark.css
     - css/custom.css
   social:
     - name: Github

@@ -1,5 +1,5 @@
 ---
-title: "Lets Automate Ourselves a Blog"
+title: "A blog, the fun way"
 date: 2019-07-10T06:14:04Z
 draft: true
 ---
@@ -63,18 +63,14 @@ This tells VS Code how to instantiate your container, this file only has the `do
 
 [source,json]
 ----
-{
-	"dockerFile": "Dockerfile",
-	"extensions": [],
-	"runArgs": [ 
-		"-v", "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro",
-		"--name", "hugo_dev"
-
-	],
-	"postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
-}
+include::{sourcedir}/.devcontainer.json[] 
 ----
-Also, because I'm lazy I added the `--name` argument so that I can always access the container with the same command `docker exec -it hugo_dev  bash -c 'cd /workspaces/blog ; exec "${SHELL:-sh}"'`
+<1> mount the ssh keys in a temporary location
+<2> name the container so that we get a consistent container name
+<3> now that the container is running, move the keys into a better location
+
+Because I'm lazy I added the `--name` argument so that I can always access the container with the same command `docker exec -it hugo_dev  bash -c 'cd /workspaces/blog ; exec "${SHELL:-sh}"'`
+
 
 === Maybe we should create this blog and set a theme
 
@@ -91,10 +87,3 @@ It's also necessary to update the `theme` value to `hugo-coder`, as mentioned on
 
 Hugo doesn't seem to support asciidoctor very well; Code highlighting and admonitions need to be https://rgielen.net/posts/2019/creating-a-blog-with-hugo-and-asciidoctor/[manually added as well].
 
-[source,bash]
-----
-docker exec -it hugo_dev  bash -c 'cd /workspaces/blog ; exec "${SHELL:-sh}"'
-cd tldr
-mkdir static/css
-rougify style github >> static/css/github.css
-----
