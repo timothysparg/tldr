@@ -1,18 +1,16 @@
 ---
 title: "A blog, the fun way"
 date: 2019-07-10T06:14:04Z
-draft: true
 ---
 :icons: font
 :source-highlighter: rouge
 :rouge-style: molokai
 :sourcedir: ./
 
-
 To write a blog you must first build a blog? +
 Apparently in my mind this is true, so here we are. 
 
-*_tl;dr_*:  _asciidoc(tor) support isn't quite as good as you would like it to be in Hugo_
+*_tl;dr_*:  _putting disparate technologies together always takes longer than expected_
 
 
 == Tools 
@@ -27,12 +25,11 @@ Apparently in my mind this is true, so here we are.
 Whilst VS Code and Docker aren't strictly necesary, I've been itching to use the https://code.visualstudio.com/docs/remote/containers[Container Development] feauture of VS Code. +
 You're going to need to install the https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack[Remote Development extension pack] for this.
 
-== First steps
 
-=== Create a repo
+== Create a repo
 do your thing. 
 
-===  Add a Dockerfile
+==  Add a Dockerfile
     
 This is pretty standard sauce; using https://github.com/klakegg/docker-hugo[klakegg/docker-hugo] as the base, because the Hugo package provided using `apt-get` is several versions behind which caused issues with the themes. +
 Also I was too lazy to build it from source.
@@ -43,7 +40,7 @@ include::{sourcedir}/Dockerfile[]
 ----
 <1> `asciidoctor-diagram` not used just yet.
 
-====  Do some unsafe stuff with asciidoctor
+== Do some unsafe stuff with asciidoctor
 
 Hugo calls asciidoctor with the https://asciidoctor.org/man/asciidoctor/#security-settings[`--safe` parameter] which seems reasonable. 
 The unreasonable part is that you can't disable it or you pass custom parameters to it.
@@ -57,7 +54,7 @@ include::{sourcedir}/asciidoctor[]
 ----
 WARNING: After I changed the context of the hugo site to not be in a sub-folder, then this wasn't necessary, but it might still come in useful when I want to use diagrams. 
 
-=== Add https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference[.devcontainer.json]
+== Add https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference[.devcontainer.json]
 
 This tells VS Code how to instantiate your container, this file only has the `dockerFile` portion, but if you want to push using your ssh keys, you might want the additional ssh related snippets. +
 
@@ -72,7 +69,7 @@ include::{sourcedir}/.devcontainer.json[]
 Because I'm lazy I added the `--name` argument so that I can always access the container with the same command `docker exec -it hugo_dev  bash -c 'cd /workspaces/blog ; exec "${SHELL:-sh}"'`
 
 
-=== Maybe we should create this blog and set a theme
+== Maybe we should create this blog and set a theme
 
 [source,bash]
 ----
@@ -89,4 +86,6 @@ It's also necessary to update the `theme` value to `hugo-coder`, as mentioned on
 === Let's go rouge 
 
 Hugo doesn't seem to support asciidoctor very well; Code highlighting and admonitions need to be https://rgielen.net/posts/2019/creating-a-blog-with-hugo-and-asciidoctor/[manually added as well].
+
+== Hello netlify
 
