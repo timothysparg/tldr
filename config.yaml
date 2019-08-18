@@ -1,4 +1,4 @@
-baseURL: 'https://groknull.dev'
+baseURL: 'https://www.tldr.groknull.dev'
 theme: hugo-coder
 languagecode: en
 defaultcontentlanguage: en
