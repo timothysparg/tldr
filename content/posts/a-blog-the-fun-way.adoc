@@ -105,3 +105,9 @@ My final `netlify.toml` looks as follows
 ----
 include::{sourcedir}/netlify.toml[] 
 ----
+
+Also worth noting that I had to include a `Gemfile` 
+[source,ruby]
+----
+include::{sourcedir}/Gemfile[] 
+----
