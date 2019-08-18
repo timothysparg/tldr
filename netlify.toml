@@ -3,10 +3,10 @@
   command = "hugo --gc -b $DEPLOY_PRIME_URL"
   HUGO_VERSION = "0.55.6" 
 
-[context.production.environment]
+[context.production]
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
-  command = "hugo --gc"
+  command = "hugo --gc --minify"
 
 [context.deploy-preview]
   command = "hugo --gc --buildDrafts --buildFuture -b $DEPLOY_PRIME_URL"
