@@ -87,7 +87,7 @@ It's also necessary to update the `theme` value to `hugo-coder`, as mentioned on
 
 Hugo doesn't seem to support asciidoctor very well; Code highlighting and admonitions need to be https://rgielen.net/posts/2019/creating-a-blog-with-hugo-and-asciidoctor/[manually added as well].
 
-== Hello netlify
+=== Hello netlify
 
 Finally, lets make these ramblings more accessible. + 
 I found the following readings useful in getting this blog hosted.
