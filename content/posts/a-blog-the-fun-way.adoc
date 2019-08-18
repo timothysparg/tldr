@@ -111,3 +111,5 @@ Also worth noting that I had to include a `Gemfile`
 ----
 include::{sourcedir}/Gemfile[] 
 ----
+
+Source of blog can be found at https://github.com/timothysparg/tldr
