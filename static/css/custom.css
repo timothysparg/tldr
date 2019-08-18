@@ -32,4 +32,15 @@ li p {
     margin-inline-end: 0px;
 }
 
+/* admonition blocks are too spaced. Default is 1.6rem*/
+th, td {
+    padding: 0.5rem;
+}
+
+/* lists are too spaced. Default is 1.6rem*/
+li p {
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+}
+
 .footerText i {color:#777777}

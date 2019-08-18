@@ -1,6 +1,6 @@
 ---
 title: "A blog, the fun way"
-date: 2019-07-10T06:14:04Z
+date: 2019-08-18T06:14:04Z
 ---
 :icons: font
 :source-highlighter: rouge
@@ -89,3 +89,19 @@ Hugo doesn't seem to support asciidoctor very well; Code highlighting and admoni
 
 == Hello netlify
 
+Finally, lets make these ramblings more accessible. + 
+I found the following readings useful in getting this blog hosted.
+
+* https://www.netlify.com/docs/build-gotchas/
+* https://www.netlify.com/docs/build-settings/
+* https://www.netlify.com/docs/continuous-deployment/#deploy-contexts
+* https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/
+* https://gohugo.io/hosting-and-deployment/hosting-on-netlify/
+* https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow
+* https://www.netlify.com/docs/netlify-toml-reference/
+
+My final `netlify.toml` looks as follows
+[source,toml]
+----
+include::{sourcedir}/netlify.toml[] 
+----
