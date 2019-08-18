@@ -6,7 +6,7 @@ draft: true
 :icons: font
 :source-highlighter: rouge
 :rouge-style: molokai
-:sourcedir: ../
+:sourcedir: ./
 
 
 To write a blog you must first build a blog? +
@@ -55,7 +55,7 @@ If you place the `asciidoctor` script in `/usr/local/sbin/` it will be evaluated
 ----
 include::{sourcedir}/asciidoctor[] 
 ----
-
+WARNING: After I changed the context of the hugo site to not be in a sub-folder, then this wasn't necessary, but it might still come in useful when I want to use diagrams. 
 
 === Add https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference[.devcontainer.json]
 
@@ -76,10 +76,13 @@ Because I'm lazy I added the `--name` argument so that I can always access the c
 
 [source,bash]
 ----
-docker exec -it hugo_dev  bash -c 'cd /workspaces/blog ; exec "${SHELL:-sh}"'
+docker exec -it hugo_dev  bash -c 'cd /workspaces/tldr ; exec "${SHELL:-sh}"'
 hugo new site tldr
+mv tldr/* . <1>
+rm tldr
 git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder  
 ----
+<1> we don't need the sub folder - we aren't doing multiple sites
 
 It's also necessary to update the `theme` value to `hugo-coder`, as mentioned on the https://github.com/luizdepra/hugo-coder/[hugo-coder homepage]
 
