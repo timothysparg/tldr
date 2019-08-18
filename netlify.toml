@@ -8,4 +8,7 @@
   HUGO_ENABLEGITINFO = "true"
   command = "hugo --gc --minify"
 
+[context.deploy-preview]
+  command = "hugo --buildDrafts --buildFuture -b $DEPLOY_PRIME_URL"
+
 [context.deploy-preview.environment]
