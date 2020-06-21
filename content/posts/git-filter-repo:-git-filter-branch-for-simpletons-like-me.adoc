@@ -1,5 +1,5 @@
 ---
-title: "git filter-repo: A git filter-branch repleacment for simpletons like me"
+title: "git filter-repo: A git filter-branch replacement for simpletons like me"
 date: 2020-06-21T15:42:19Z
 ---
 :icons: font
