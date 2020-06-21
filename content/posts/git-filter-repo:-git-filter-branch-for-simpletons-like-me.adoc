@@ -1,7 +1,6 @@
 ---
 title: "git filter-repo: A git filter-branch repleacment for simpletons like me"
 date: 2020-06-21T15:42:19Z
-draft: true
 ---
 :icons: font
 :source-highlighter: rouge
