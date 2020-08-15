@@ -1,4 +1,4 @@
-FROM klakegg/hugo:0.55.6-ext-ubuntu
+FROM klakegg/hugo:0.74.3-ext-ubuntu
 
 RUN apt-get update && apt-get install -y \
     git \
