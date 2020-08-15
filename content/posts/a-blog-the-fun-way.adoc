@@ -1,4 +1,8 @@
 ---
+tags:
+- hugo
+- docker
+- netlify
 title: "A blog, the fun way"
 date: 2019-08-18T06:14:04Z
 ---
