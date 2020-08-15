@@ -1,4 +1,8 @@
 ---
+tags:
+- git
+- filter-repo
+- fishshell
 title: "git filter-repo: The text that never was"
 date: 2020-08-15T15:02:31Z
 draft: true
