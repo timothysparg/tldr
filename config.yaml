@@ -48,3 +48,6 @@ menu:
     - name: About
       weight: 2
       url: /about/
+services:
+  disqus:
+    shortname: ""
