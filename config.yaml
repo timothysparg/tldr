@@ -3,7 +3,8 @@ theme: hugo-coder
 languagecode: en
 defaultcontentlanguage: en
 title: TL;DR
-paginate: 20
+pagination:
+  pagerSize: 20
 canonifyurls: true
 pygmentsstyle: bw
 pygmentscodefences: true
