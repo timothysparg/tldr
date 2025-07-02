@@ -11,6 +11,10 @@ pygmentscodefences: true
 pygmentscodefencesguesssyntax: true
 taxonomies:
   tag: tags
+
+[security]
+  [security.exec]
+    allow = ["asciidoctor"]
 params:
   author: Tim Sparg
   info: Developer at rest
