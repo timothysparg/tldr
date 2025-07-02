@@ -1,2 +1,3 @@
-resources
-public
+
+.serena/
+.hugo_build.lock
