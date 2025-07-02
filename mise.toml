@@ -1,0 +1,3 @@
+[tools]
+hugo-extended = "0.147.9"
+ruby = "3.4.4"
