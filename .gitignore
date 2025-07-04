@@ -1,3 +1,5 @@
 
 .serena/
 .hugo_build.lock
+public/
+resources/
