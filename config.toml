@@ -1,4 +1,4 @@
-baseURL = "https://www.tldr.groknull.dev"
+baseURL = "https://tldr.groknull.dev"
 theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
@@ -58,3 +58,7 @@ pygmentsCodeFencesGuessSyntax = true
 [services]
   [services.disqus]
     shortname = ""
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
