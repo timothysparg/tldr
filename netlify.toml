@@ -1,14 +1,16 @@
-[build] 
+[build]
+  command = "hugo --gc --minify"
   publish = "public"
-  command = "hugo --gc -b $DEPLOY_PRIME_URL"
-  HUGO_VERSION = "0.55.6" 
+  [build.environment]
+    HUGO_VERSION = "0.147.9"
 
 [context.production]
-  HUGO_ENV = "production"
-  HUGO_ENABLEGITINFO = "true"
   command = "hugo --gc --minify"
+  [context.production.environment]
+    HUGO_ENV = "production"
+    HUGO_VERSION = "0.147.9"
 
 [context.deploy-preview]
-  command = "hugo --gc --buildDrafts --buildFuture -b $DEPLOY_PRIME_URL"
-
-[context.deploy-preview.environment]
+  command = "hugo --gc --minify --buildDrafts --buildFuture -b $DEPLOY_PRIME_URL"
+  [context.deploy-preview.environment]
+    HUGO_VERSION = "0.147.9"
